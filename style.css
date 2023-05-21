@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: url("./neom-39n8YVSn0d4-unsplash.jpg") center / cover;
+}
+
+.table_body {
+  width: 82vw;
+  height: 90vh;
+  background-color: #fff5;
+  border-radius: 10px;
+  padding: 20px;
+
+  backdrop-filter: blur(7px);
+}
+
+thead,
+tbody {
+  width: 100%;
+}
+
+tbody {
+  background-color: #ffffffcb;
+}
+
+thead {
+  width: 100%;
+  background-color: #ffffff98;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  padding: 1.7rem;
+  text-align: center;
+  font-size: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+tbody tr {
+  width: 100%;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  transition: 0.3s ease all;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #0000000e;
+}
+
+tbody tr:hover {
+  background-color: #1d1b1b25;
+}
