@@ -15,7 +15,6 @@ body {
   background-color: #fff5;
   border-radius: 10px;
   padding: 20px;
-
   backdrop-filter: blur(7px);
 }
 
@@ -37,7 +36,7 @@ table,
 th,
 td {
   border-collapse: collapse;
-  padding: 1.7rem;
+  padding: 1.08rem;
   text-align: center;
   font-size: 20px;
 }
@@ -53,10 +52,24 @@ tbody tr {
   transition: 0.3s ease all;
 }
 
-tbody tr:nth-child(even) {
+/* tbody tr:nth-child(even) {
   background-color: #0000000e;
-}
+} */
 
 tbody tr:hover {
   background-color: #1d1b1b25;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: rgb(125, 255, 125);
+  padding: 12px 48px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.none {
+  display: none;
 }
