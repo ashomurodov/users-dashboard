@@ -58,6 +58,7 @@ tbody tr {
 
 tbody tr:hover {
   background-color: #1d1b1b25;
+  cursor: pointer;
 }
 
 button {

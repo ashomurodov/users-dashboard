@@ -5,6 +5,7 @@ const usersAddressEl = document.querySelectorAll(".address");
 const userDeleteEl = document.querySelectorAll(".delete");
 const tableEl = document.querySelectorAll(".tableElement");
 const usersIdEl = document.querySelectorAll(".id");
+let AllUsers;
 
 const users: any[] = [];
 const request = fetch("https://jsonplaceholder.typicode.com/users")
@@ -19,12 +20,16 @@ const request = fetch("https://jsonplaceholder.typicode.com/users")
 // console.log(request);
 
 function drawUser([users]: any[]) {
-  console.log(users);
+  AllUsers = users;
+  console.log(AllUsers, "fake");
   for (let i = 0; i < users.length; i++) {
     usersFullNameEl[i].textContent = users[i].name;
     usersUserNameEl[i].textContent = users[i].username;
     usersEmailEl[i].textContent = users[i].email;
     usersAddressEl[i].textContent = users[i].address.city;
+    tableEl[i].addEventListener("click", () => {
+      getUserDate(users[i]);
+    });
   }
 }
 
@@ -37,10 +42,21 @@ userDeleteEl.forEach((deleteEl, idx) => {
   });
 });
 
+tableEl.forEach((el, idx) => {
+  el.addEventListener("click", () => {
+    // console.log(el);
+    window.location.href = `https://jsonplaceholder.typicode.com/users/${idx + 1}`;
+  });
+});
+
 function editTableId() {
   let number = 1;
   const tableIdEl = document.querySelectorAll(".id");
   for (let id of tableIdEl) {
     id.textContent = `${number++}`;
   }
+}
+
+function getUserDate(user) {
+  console.log(user);
 }
